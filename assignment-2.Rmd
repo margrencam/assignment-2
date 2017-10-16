@@ -24,6 +24,11 @@ sum_column <- sum(iris$Sepal.Width)
 print(sum_column)
 ```
 
+# Other sum function
+I tried to find other ways to make a sum function that did not use the default, but was not at all successful.  I tried to use a cumulative function.  I tried to make a list of all the members of a vector, thinking I could add them together after, and I could not make that work either.  
+
+I did not get around to trying the division function.  
+
 
 ```{r}
 library(ggplot2)
@@ -68,7 +73,11 @@ p1 <- p + geom_violin() + labs(title="Iris Data")
 return(p1)
 }
 print(grouped_violin_plot(iris, "Sepal.Length", "Species"))
+
 ```
+
+# Changing the color
+I tried to use the "scale_color_manual" function like it shows on the online tutorial, naming the species categories and assigning them colors, but it just produced exactly the same graph.  I also tried to use a couple other examples I found online, and did not succeed in having an effect. 
 
 ```{r}
  d = iris
@@ -82,6 +91,9 @@ print(grouped_violin_plot(iris, "Sepal.Length", "Species"))
     # YOUR CODE HERE: assign the difference in the medians to to the variable 'result'
     return(result)
 ```
+# difference in medians
+My console says that bindrcpp was built under R version 3.4.2 and would not run the function.  I tried to install the bindrcpp package, and instead of putting it into R like other packages, the program put it somewhere in a temp folder, and I was not able to find it (using search in Windows explorer).
+
 
 ```{r}
 randomize_rts <- function(iris) {
@@ -202,4 +214,6 @@ ptest <- permutation_twogroups(iris, "Sepal.Width", "Species", "versicolor",
 "virginica", difference_in_medians)
 set.seed(previous_seed)
 ```
+
+
 
